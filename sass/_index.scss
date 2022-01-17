@@ -1,0 +1,297 @@
+@import "libs/reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+
+/* Box sizing rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: opti;
+  max-width: 1920px;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+/*---------------------*/
+
+.container {
+    margin: 0;
+    font-family: "roboto", sans-serif;
+    width: 100%
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    main {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* CSS des fonctions */
+    .fonctionnement {
+        padding: 48px 20px;
+
+        h2 {
+            align-self: flex-start;
+            margin-left: 5%;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        &__div {
+            display: flex;
+            margin-bottom: 3%;
+        }
+
+        &__card {
+            background-color: #f6f6f6;
+            padding: 20px 28px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+            border-radius: 16px;
+            cursor: auto;
+            transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
+            position: relative;
+            width: 97%;
+
+            &:hover {
+                background-color: #f2eafb;
+                padding: 20px 28px;
+                box-shadow: 0 3px 16px rgba(0, 0, 0, 0.7);
+                border-radius: 16px;
+                cursor: pointer;
+                transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
+            }
+
+            &:hover > i {
+                color: #9356DC;
+            }
+        }
+
+        i {
+            color: #7E7E7E;
+            margin-right: 16px;
+        }
+
+        &__chiffre {
+            color: #fff;
+            background-color: #9356DC;
+            border-radius: 32px;
+            padding: 2.5px 8px;
+            position: relative;
+            left: -16px;
+        }
+    }
+
+    /* CSS des restaurants */
+    .liste-restaurants {
+        padding: 48px 20px;
+        background-color: #f6f6f6;
+
+        h2 {
+            width: 95%;
+            align-self: flex-start;
+            margin: 0 0 2% 5%;
+            font-weight: bold;
+        }
+
+        .restaurant {
+            display: block;
+            position: relative;
+            margin-bottom: 3%;
+            border-radius: 16px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+            background-color: #fff;
+            z-index: 1;
+            transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
+            height: 256px;
+
+            &:hover {
+                border-radius: 16px;
+                box-shadow: 0 3px 16px rgba(0, 0, 0, 0.7);
+                background-color: #fff;
+                z-index: 1;
+                transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
+            }
+
+            
+            /* CSS Icône coeur */
+            i {
+                right: 30px;
+                bottom: 30px;
+
+                .fa-heart {
+                    z-index: 10;
+                    position: absolute;
+                    font-size: 24px;
+                    font-weight: 900;
+                    color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-stroke: 1.5px #000;
+                    background-image: linear-gradient(225deg, transparent 49%, #9356DC 58%, #FF79DA 100%);
+                    background-size: 100% 300%;
+                    transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
+                    cursor: auto;
+
+                    &:hover {
+                        z-index: 10;
+                        position: absolute;
+                        font-size: 24px;
+                        font-weight: 900;
+                        color: transparent;
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-stroke: 1.5px #000;
+                        background-image: linear-gradient(225deg, transparent 49%, #9356DC 58%, #FF79DA 100%);
+                        background-size: 100% 300%;
+                        transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
+                        cursor: pointer;
+                        background-position: 0% -50%;
+                        -webkit-text-stroke: transparent;
+                    }
+
+                    &:active {
+                        z-index: 10;
+                        position: absolute;
+                        font-size: 24px;
+                        font-weight: 900;
+                        color: transparent;
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-stroke: 1.5px #000;
+                        background-image: linear-gradient(225deg, transparent 49%, #9356DC 58%, #FF79DA 100%);
+                        background-size: 100% 300%;
+                        transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
+                        background-position: 0% -50%;
+                        -webkit-text-stroke: transparent;
+                    }
+                }
+            }
+
+            img {
+                -o-object-fit: cover;
+                object-fit: cover;
+                border-radius: 16px 16px 0 0;
+                width: 100%;
+                height: 70%;
+                z-index: 1;
+            }
+
+            .restau__notif-new {
+                display: block;
+                padding: 8px 13px;
+                font-size: 14px;
+                background-color: #99E2D0;
+                color: #278870;
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                z-index: 2;
+                -webkit-animation: notif-new--shake 2.5s alternate linear infinite;
+                animation: notif-new--shake 2.5s alternate linear infinite;
+            }
+
+            .restau__desc {
+                padding: 13px;
+            }
+
+            .restau__desc h4 {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+}
+
+/* Adaptation responsive fonctionnement */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+.fonctionnement {
+    text-align: center;
+}
+}
+@media screen and (min-width: 992px) {
+.fonctionnement__container {
+    display: flex;
+    justify-content: space-evenly;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+.fonctionnement__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+}
+@media screen and (min-width: 992px) {
+.fonctionnement__div {
+    width: 30%;
+    justify-content: center;
+    text-align: center;
+}
+}
+@media screen and (min-width: 768px) {
+.fonctionnement__card {
+    max-width: 320px;
+}
+}
+@media screen and (min-width: 992px) {
+.fonctionnement__card {
+    padding: 20px 12px;
+}
+}
+@media screen and (min-width: 768px) {
+.fonctionnement__card:hover {
+    max-width: 320px;
+}
+}
+@media screen and (min-width: 992px) {
+.fonctionnement__card:hover {
+    padding: 20px 12px;
+}
+}
+
+/* Adaptation responsive restaurant */
+@media screen and (min-width: 992px) {
+    .liste-restaurants {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .restaurant {
+        width: 45%;
+        margin-bottom: 48px;
+    }
+}
