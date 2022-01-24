@@ -50,56 +50,6 @@ footer p, .menus h2 {
   align-items: center;
   width: 160px;
 }
-.header__localisation {
-  height: 50px;
-  width: 100%;
-  background-color: #EAEAEA;
-  box-shadow: inset 2px 5px 5px #CECECE;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #202020;
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-}
-.header__localisation i {
-  margin-right: 12px;
-}
-.header__intro {
-  width: 100%;
-  padding: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  background-color: #f6f6f6;
-}
-.header__intro h2, .header__intro p {
-  margin-bottom: 2%;
-}
-.header__intro .introBtn {
-  display: block;
-  margin: auto;
-  width: 230px;
-  margin-top: 5%;
-  padding: 16px 22px;
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
-  text-align: center;
-  font-size: 14px;
-  font-weight: 700;
-  color: white;
-  background-image: linear-gradient(-5deg, #9356DC, #FF79DA);
-}
-.header__intro .introBtn:hover {
-  opacity: 0.9;
-  color: #fff;
-  border-radius: 48px;
-  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.7);
-  cursor: pointer;
-  transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
-}
 
 footer {
   background-color: #353535;
@@ -224,8 +174,7 @@ body {
   width: 100% a;
   width-color: black;
   width-text-decoration: none;
-  /* CSS des fonctions */
-  /* CSS des restaurants */
+  /* Fin du CSS Main */
 }
 .container main {
   width: 100%;
@@ -233,21 +182,79 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* CSS fonctionnement */
+  /* Fin CSS Fonctionnement */
+  /* CSS des restaurants */
+  /* Fin liste-restaurants */
 }
-.container .fonctionnement {
+.container main .localisation {
+  height: 50px;
+  width: 100%;
+  background-color: #EAEAEA;
+  box-shadow: inset 2px 5px 5px #CECECE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #202020;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+.container main .localisation i {
+  margin-right: 12px;
+}
+.container main .intro {
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+.container main .intro h2 {
+  font-weight: bold;
+  font-size: 25px;
+}
+.container main .intro h2, .container main .intro p {
+  margin-bottom: 3%;
+}
+.container main .intro .introBtn {
+  display: block;
+  margin: auto;
+  width: 230px;
+  margin-top: 5%;
+  padding: 16px 22px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  background-image: linear-gradient(-5deg, #9356DC, #FF79DA);
+}
+.container main .intro .introBtn:hover {
+  opacity: 0.9;
+  color: #fff;
+  border-radius: 48px;
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
+}
+.container main .fonctionnement {
   padding: 48px 20px;
 }
-.container .fonctionnement h2 {
+.container main .fonctionnement h2 {
   align-self: flex-start;
   margin-left: 5%;
   margin-bottom: 40px;
   font-weight: bold;
 }
-.container .fonctionnement__div {
+.container main .fonctionnement__div {
   display: flex;
   margin-bottom: 3%;
 }
-.container .fonctionnement__card {
+.container main .fonctionnement__card {
   background-color: #f6f6f6;
   padding: 20px 28px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
@@ -257,7 +264,7 @@ body {
   position: relative;
   width: 97%;
 }
-.container .fonctionnement__card:hover {
+.container main .fonctionnement__card:hover {
   background-color: #f2eafb;
   padding: 20px 28px;
   box-shadow: 0 3px 16px rgba(0, 0, 0, 0.7);
@@ -265,14 +272,14 @@ body {
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
 }
-.container .fonctionnement__card:hover > i {
+.container main .fonctionnement__card:hover > i {
   color: #9356DC;
 }
-.container .fonctionnement i {
+.container main .fonctionnement i {
   color: #7E7E7E;
   margin-right: 16px;
 }
-.container .fonctionnement__chiffre {
+.container main .fonctionnement__chiffre {
   color: #fff;
   background-color: #9356DC;
   border-radius: 32px;
@@ -280,17 +287,18 @@ body {
   position: relative;
   left: -16px;
 }
-.container .liste-restaurants {
+.container main .liste-restaurants {
   padding: 48px 20px;
   background-color: #f6f6f6;
+  /* Fin CSS restaurant */
 }
-.container .liste-restaurants h2 {
+.container main .liste-restaurants h2 {
   width: 95%;
   align-self: flex-start;
   margin: 0 0 2% 5%;
   font-weight: bold;
 }
-.container .liste-restaurants .restaurant {
+.container main .liste-restaurants .restaurant {
   display: block;
   position: relative;
   margin-bottom: 3%;
@@ -302,40 +310,36 @@ body {
   height: 256px;
   /* CSS Icône coeur */
 }
-.container .liste-restaurants .restaurant:hover {
+.container main .liste-restaurants .restaurant:hover {
   border-radius: 16px;
   box-shadow: 0 3px 16px rgba(0, 0, 0, 0.7);
   background-color: #fff;
   z-index: 1;
   transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
 }
-.container .liste-restaurants .restaurant i {
+.container main .liste-restaurants .restaurant i {
   right: 30px;
   bottom: 30px;
 }
-.container .liste-restaurants .restaurant i .fa-heart {
+.container main .liste-restaurants .restaurant i .fa-heart {
   z-index: 10;
   position: absolute;
   font-size: 24px;
   font-weight: 900;
   color: transparent;
-  -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-stroke: 1.5px #000;
   background-image: linear-gradient(225deg, transparent 49%, #9356DC 58%, #FF79DA 100%);
   background-size: 100% 300%;
   transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
   cursor: auto;
 }
-.container .liste-restaurants .restaurant i .fa-heart:hover {
+.container main .liste-restaurants .restaurant i .fa-heart:hover {
   z-index: 10;
   position: absolute;
   font-size: 24px;
   font-weight: 900;
   color: transparent;
-  -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-stroke: 1.5px #000;
   background-image: linear-gradient(225deg, transparent 49%, #9356DC 58%, #FF79DA 100%);
   background-size: 100% 300%;
   transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
@@ -343,22 +347,20 @@ body {
   background-position: 0% -50%;
   -webkit-text-stroke: transparent;
 }
-.container .liste-restaurants .restaurant i .fa-heart:active {
+.container main .liste-restaurants .restaurant i .fa-heart:active {
   z-index: 10;
   position: absolute;
   font-size: 24px;
   font-weight: 900;
   color: transparent;
-  -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-stroke: 1.5px #000;
   background-image: linear-gradient(225deg, transparent 49%, #9356DC 58%, #FF79DA 100%);
   background-size: 100% 300%;
   transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
   background-position: 0% -50%;
   -webkit-text-stroke: transparent;
 }
-.container .liste-restaurants .restaurant img {
+.container main .liste-restaurants .restaurant img {
   -o-object-fit: cover;
   object-fit: cover;
   border-radius: 16px 16px 0 0;
@@ -366,23 +368,11 @@ body {
   height: 70%;
   z-index: 1;
 }
-.container .liste-restaurants .restaurant .restau__notif-new {
-  display: block;
-  padding: 8px 13px;
-  font-size: 14px;
-  background-color: #99E2D0;
-  color: #278870;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 2;
-  -webkit-animation: notif-new--shake 2.5s alternate linear infinite;
-  animation: notif-new--shake 2.5s alternate linear infinite;
-}
-.container .liste-restaurants .restaurant .restau__desc {
+.container main .liste-restaurants .restaurant .restau__desc {
   padding: 13px;
 }
-.container .liste-restaurants .restaurant .restau__desc h4 {
+.container main .liste-restaurants .restaurant .restau__desc h4 {
+  font-weight: bold;
   margin-bottom: 8px;
 }
 
