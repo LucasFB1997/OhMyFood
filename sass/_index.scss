@@ -204,10 +204,11 @@ body {
 
                 
                 /* CSS Icône coeur */
+                
                 i {
                     right: 30px;
                     bottom: 30px;
-                    
+
                     .fa-heart {
                         z-index: 10;
                         position: absolute;
@@ -219,7 +220,7 @@ body {
                         background-size: 100% 300%;
                         transition: all 0.5s cubic-bezier(0.5, 0, 0.35, 1);
                         cursor: auto;
-
+    
                         &:hover {
                             z-index: 10;
                             position: absolute;
@@ -234,7 +235,7 @@ body {
                             background-position: 0% -50%;
                             -webkit-text-stroke: transparent;
                         }
-
+    
                         &:active {
                             z-index: 10;
                             position: absolute;
@@ -250,6 +251,7 @@ body {
                         }
                     }
                 }
+                
 
                 img {
                     -o-object-fit: cover;
